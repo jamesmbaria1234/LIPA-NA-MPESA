@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { useFormik } from "formik";
 import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+
 import { API_URL } from "../utills/Config";
 import "./App.css";
 
 function App() {
   const [loading, SetIsLoading] = useState(false)
-  const [error, setError] = useState(null)
+  const [Error, setError] = useState(null)
   const formik = useFormik({
     initialValues: { phone: "", amount: "" },
     onSubmit: async function (values) {
@@ -23,11 +25,11 @@ function App() {
         });
         
         
-        console.log("frontend response",response);
-        alert("Payment request sent successfully!");
+        // console.log("frontend response",response);
+        toast("Payment request sent successfully!");
       } catch (error) {
-        setError("failed!")
-        console.error("Error submitting form:", error.message);
+        toast('Something went wrong ⚠️')
+        // console.error("Error submitting form:", error.message);
      
       }finally{
         SetIsLoading(false) 
@@ -51,6 +53,10 @@ function App() {
 
   return (
     <div className="app">
+
+        
+        <ToastContainer />
+      
       <form onSubmit={formik.handleSubmit}>
         <p>Lipa na Mpesa</p>
         <div className="inputs">
@@ -81,7 +87,9 @@ function App() {
         <div className="inputs">
           <button type="submit" disabled={loading}>{loading? "Loading..":"Submit"}</button>
         </div>
-        {error && <p>{error}</p>}
+       
+        {Error && <p className="errors">Error: {Error}</p>}
+
         <p className="copy-right"> <span>copyright </span>&copy;  James Mbaria 2025 . All rights reserved.</p>
       </form>
       
