@@ -2,13 +2,14 @@ import express from "express";
 import {config} from 'dotenv';
 import cors from "cors";
 import acessToken from './Routes/Token.route.js'
+import callback from './Routes/CallBack.js'
 config();
 
 const app = express()
 
 
 app.get("/", (request, response) => {
-  response.send('server is running')
+  response.send('server is running nicely')
 });
 
 
@@ -18,6 +19,7 @@ app.use (express.json())
 app.use(express.urlencoded({ extended: true }));
 
 app.use("/api", acessToken)
+app.use("/api",callback)
 app.listen(process.env.PORT,()=>{
     console.log(`app running on port ${process.env.PORT}`);
     

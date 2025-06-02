@@ -36,7 +36,8 @@ export async function sendStkPush(request, response) {
             PartyA: phoneNumber,
             PartyB: process.env.SHORTCODE,
             PhoneNumber: phoneNumber,
-            CallBackURL: "https://ourwebsite.com/callback",
+            CallBackURL: "https://c31e-197-248-42-199.ngrok-free.app/api/callback",  
+            // server url plus path to callback route handling callback 
             AccountReference: "account",
             TransactionDesc: "test payment",
         };
