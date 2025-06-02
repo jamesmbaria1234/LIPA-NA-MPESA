@@ -5,7 +5,14 @@ import acessToken from './Routes/Token.route.js'
 config();
 
 const app = express()
-app.use(cors({ origin: ["http://localhost:5173","https://lipa-na-mpesa.vercel.app/" ]}));
+
+
+app.get("/", (request, response) => {
+  response.send('server is running')
+});
+
+
+app.use(cors({ origin: ["http://localhost:5173","https://lipa-na-mpesa.vercel.app/" ],credentials:true,}));
 
 app.use (express.json())
 app.use(express.urlencoded({ extended: true }));
