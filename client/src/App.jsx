@@ -26,9 +26,9 @@ function App() {
         
         
         // console.log("frontend response",response);
-        toast("Payment request sent successfully!");
+        toast.success("Payment request sent successfully");
       } catch (error) {
-        toast('Something went wrong ⚠️')
+        toast.error('Something went wrong ⚠️')
         // console.error("Error submitting form:", error.message);
      
       }finally{
