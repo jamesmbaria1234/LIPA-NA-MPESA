@@ -15,7 +15,7 @@ width: 50%;
 background-color: white;
 border-radius: 10px;
 }
-@media screen and (max-width:15.625em){
+@media screen and (max-width:22.1875em){
     .app form{
         width: 100%;
         
