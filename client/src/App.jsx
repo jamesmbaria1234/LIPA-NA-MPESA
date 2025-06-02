@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useFormik } from "formik";
 import axios from "axios";
 import { API_URL } from "../utills/Config";
-import "./app.css";
+// import "./App.css";
 
 function App() {
   const [loading, SetIsLoading] = useState(false)
