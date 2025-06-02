@@ -90,7 +90,7 @@ function App() {
        
         {Error && <p className="errors">Error: {Error}</p>}
 
-        <p className="copy-right"> <span>copyright </span>&copy;  James Mbaria 2025 . All rights reserved.</p>
+        <p className="copy-right"> copyright &copy;  James Mbaria 2025 . All rights reserved.</p>
       </form>
       
     </div>
