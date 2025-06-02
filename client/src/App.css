@@ -18,6 +18,13 @@ border-radius: 10px;
 p{
     font-size: 3rem;
     text-transform: capitalize;
+    font-weight: 600;
+}
+@media screen and (max-width:45.375em){
+ p{
+   font-weight: 500;
+   font-size: 2rem;
+ }   
 }
 label{
     text-transform: capitalize;

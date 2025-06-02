@@ -15,6 +15,7 @@ function App() {
       // console.log("Sending data:", values);
       try {
         SetIsLoading(true)
+        
        const response= await axios.post(`${API_URL}api/stkPush`, {
           phoneNumber: String(values.phone), 
           amount: String(values.amount),
@@ -28,6 +29,7 @@ function App() {
         // console.log("frontend response",response);
         toast.success("Payment request sent successfully");
       } catch (error) {
+        
         toast.error('Something went wrong ⚠️')
         // console.error("Error submitting form:", error.message);
      
@@ -53,12 +55,10 @@ function App() {
 
   return (
     <div className="app">
-
-        
-        <ToastContainer />
+       <ToastContainer />
       
       <form onSubmit={formik.handleSubmit}>
-        <p>Lipa na Mpesa</p>
+        <p>neuro-core innovators africa</p>         
         <div className="inputs">
           <label>Phone Number</label>
           <input
