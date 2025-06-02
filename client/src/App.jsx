@@ -58,6 +58,7 @@ function App() {
        <ToastContainer />
       
       <form onSubmit={formik.handleSubmit}>
+        <p>lipa na mpesa</p>
         <p>neuro-core innovators africa</p>         
         <div className="inputs">
           <label>Phone Number</label>
